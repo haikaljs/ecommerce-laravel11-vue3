@@ -10,11 +10,11 @@
         <div class="container">
             <div class="row my-5">
                 <div class="col-md-6 mx-auto">
-                  @error('error')
+                  @session('error')
                     <div class="alert alert-danger my-2">
                       {{session('error')}}
                     </div>
-                  @enderror
+                  @endsession
                     <div class="card shadow-sm p-5">
                         <div class="card-header bg-white text-center">
                             <h3 class="mt-2">
@@ -30,7 +30,7 @@
                                     <label for="floatingInput">Email address*</label>
                                     @error('email')
                                       <span class="invalide-feedback">
-                                        <strong>{{$message}}</strong>
+                                        <strong class="text-danger">{{$message}}</strong>
                                       </span>
                                     @enderror
                                 </div>
@@ -40,7 +40,7 @@
                                     <label for="floatingPassword">Password*</label>
                                     @error('password')
                                     <span class="invalide-feedback">
-                                      <strong>{{$message}}</strong>
+                                      <strong class="text-danger">{{$message}}</strong>
                                     </span>
                                   @enderror
                                 </div>
